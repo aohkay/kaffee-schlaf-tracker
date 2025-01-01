@@ -1,4 +1,4 @@
-# GitHub Actions Workflow-Datei zum Testen der Python-Anwendung
+# GitHub Actions Workflow-Datei zum Testen der Python Anwendung
 
 name: Python-Anwendung
 
