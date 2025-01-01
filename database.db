@@ -1,4 +1,4 @@
-# Erstellung der SQLite-Datenbank und der Tabelle
+# Erstellung der SQLite-Datenbank und der Tabelle.
 # Dieses Skript erstellt die Datenbank 'database.db' und die Tabelle 'konsum'.
 
 import sqlite3
