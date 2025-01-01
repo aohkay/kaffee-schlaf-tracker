@@ -1,0 +1,35 @@
+<!-- templates/results.html -->
+<!-- Seite zur Anzeige der Ergebnisse -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse-Ergebnisse</title>
+</head>
+<body>
+    <h1>Analyse-Ergebnisse</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Menge</th>
+                <th>Uhrzeit</th>
+                <th>Schlafdauer</th>
+                <th>Schlafqualität</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for eintrag in daten %}
+            <tr>
+                <td>{{ eintrag[1] }}</td>
+                <td>{{ eintrag[2] }}</td>
+                <td>{{ eintrag[3] }}</td>
+                <td>{{ eintrag[4] }}</td>
+                <td>{{ eintrag[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
