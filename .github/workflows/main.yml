@@ -1,3 +1,5 @@
+# GitHub Actions Workflow-Datei zum Testen der Python-Anwendung
+
 name: Python-Anwendung
 
 on:
@@ -27,5 +29,4 @@ jobs:
         pip install flask pytest
 
     - name: Tests ausführen
-      run: |
-        pytest tests/test_app.py
+      run: pytest tests/test_app.py
