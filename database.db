@@ -1,0 +1,26 @@
+# Erstellung der SQLite-Datenbank und der Tabelle
+# Dieses Skript erstellt die Datenbank 'database.db' und die Tabelle 'konsum'.
+
+import sqlite3
+
+# Verbindung zur SQLite-Datenbank herstellen (Datei 'database.db' wird erstellt, falls sie nicht existiert)
+conn = sqlite3.connect('database.db')
+c = conn.cursor()
+
+# SQL-Befehl zur Erstellung der Tabelle 'konsum'
+c.execute('''
+CREATE TABLE IF NOT EXISTS konsum (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    datum TEXT NOT NULL,
+    menge INTEGER NOT NULL,
+    uhrzeit TEXT NOT NULL,
+    schlafdauer INTEGER NOT NULL,
+    schlafqualitaet INTEGER NOT NULL
+)
+''')
+
+# Änderungen speichern und Verbindung schließen
+conn.commit()
+conn.close()
+
+print("Datenbank und Tabelle erfolgreich erstellt.")
